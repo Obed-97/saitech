@@ -54,8 +54,8 @@
             "php artisan clear-compiled",
             "chmod -R 777 public/"
         ]
-
     },
+
     "extra": {
         "laravel": {
             "dont-discover": []
@@ -67,7 +67,5 @@
         "sort-packages": true
     },
     "minimum-stability": "dev",
-    "prefer-stable": true,
-
-    
+    "prefer-stable": true  
 }
