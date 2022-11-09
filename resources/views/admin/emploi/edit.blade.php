@@ -39,7 +39,7 @@
                                             <select class="form-control" name="type_contrat" id="section_id">
                                                 <option value="{{$emploi->type_contrat}}" selected>{{$emploi->type_contrat}}</option>
                                                     <option value="CDD">C.D.D</option>
-                                                    <option value="CDD">C.D.I</option>
+                                                    <option value="CDI">C.D.I</option>
                                             </select>
                                         </div>
                                     </div>

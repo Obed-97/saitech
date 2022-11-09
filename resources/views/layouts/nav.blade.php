@@ -19,16 +19,12 @@
                 <li class="dropdown">
                     <a href="#">SAITECH-GROUP</a>
                     <ul>
-                        <li >
+                        <li>
                             <a href="{{route('about.index')}}">A propos</a>
-                            
                         </li>
                         <li>
                             <a href="{{route('service.index')}}">Nos services</a>
-                            
                         </li>
-                        
-                       
                     </ul>
                 </li>
                 <li >
@@ -48,17 +44,18 @@
             </ul>
             <div class="menu-right">
                 <div class="custom-area">
-                    Rue 309 Porte 201<br />
-                    Magnambougou, Bamako - MALI
+                    Bamako - MALI
+                </div>
+                <div class="custom-area">
+                    Abidjan - CÔTE D'IVOIRE
                 </div>
                 
-                <form role="search" method="get" id="searchform" class="search-btn">
+                <form role="recherche" method="get" id="searchform" class="search-btn">
                     <div class="search-box-menu">
                         <input type="text" placeholder="Recherche ...">
                         <i></i>
                     </div>
                 </form>
-                
             </div>
         </div>
     </div>

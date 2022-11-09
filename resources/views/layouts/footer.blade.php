@@ -35,7 +35,7 @@
             <span>© @php
                 echo date('Y');
             @endphp -  <a href="/" target="_blank">Saitech-Group</a>.</span>
-            <span><a href="{{route('contact.index')}}">Contactez-nous!</a> | <a href="#">Politique de confidentialité</a></span>
+            <span><a href="{{route('contact.index')}}">Contactez-nous!</a> | <a href="{{route('policy.index')}}">Politique de confidentialité</a></span>
         </div>
     </div>
     

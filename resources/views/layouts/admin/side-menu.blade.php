@@ -63,6 +63,7 @@
                        
                     </ul>
                 </li>
+                
                 @endrole
                 
 
@@ -88,6 +89,10 @@
                         <li><a href="{{route('projets.index')}}"><i class="dripicons-box"></i><span> Tous les projets</a></li>
                         <li><a href="{{route('category_projet.index')}}"><i class="dripicons-stack"></i><span>Types de projets</a></li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="{{route('clients.index')}}" class="waves-effect  text-white"><i class="dripicons-user-group"></i><span> Client  </span></a>
                 </li>
                 @role('Administrateur')
                 <li class="menu-title text-white">Paramètres</li>

@@ -6,12 +6,10 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ProjectController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EmploiController;
-use App\Http\Controllers\HistoriqueController;
 use App\Http\Controllers\StageController;
-use App\Http\Controllers\PriceController;
-use App\Http\Controllers\TeamController;
 use App\Http\Controllers\ServiceController;
-use App\Http\Controllers\FAQController;
+use App\Http\Controllers\PolicyController;
+
 
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\Type_serviceController;
@@ -28,6 +26,7 @@ use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\RoleController;
 use App\Http\Controllers\Admin\PermissionController;
 use App\Http\Controllers\Admin\AboutsController;
+use App\Http\Controllers\Admin\ClientController;
 
 
 /*
@@ -51,6 +50,7 @@ Route::resources([
     'stage' => StageController::class,
     'service' => ServiceController::class,
     'projet' => ProjectController::class,
+    'policy' => PolicyController::class,
 
     
 
@@ -76,6 +76,7 @@ Route::group(['middleware'=>['auth']], function(){
         'role' => RoleController::class,
         'permission' => PermissionController::class,
         'abouts' => AboutsController::class,
+        'clients' => ClientController::class,
         
     ]);
 

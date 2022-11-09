@@ -1,5 +1,4 @@
-@section('title', 'Home')
-    
+@section('title','Accueil')
 
 @extends('master')
 
@@ -143,12 +142,8 @@
                             <a href="{{route('service.show', $item->id)}}" class="img-box"><img src="/admin/assets/images/{{$item->image}}" alt="" /></a>
                             <div class="caption">
                                 <h2>{{$item->libelle}}</h2>
-                                <div class="cnt-info">
-                                    <div><span>Prix estim&eacute;</span><span>{{$item->prix}} f</span></div>
-                                    <div><span>Cat&eacute;gorie</span><span>{{$item->Type_service['libelle']}}</span></div>
-                                    <div><span>Client</span><span>{{$item->type_client}}</span></div>
-                                </div>
-                                <p>{{ Illuminate\Support\Str::of($item->description)->words(15) }}</p>
+                                
+                                <p style="text-align: justify">{{ Illuminate\Support\Str::of($item->description)->words(15) }}</p>
                                 <div>
                                     <a href="{{route('service.show', $item->id)}}" class="btn-text active">Voir les détails </a>
                                 </div>
@@ -163,6 +158,7 @@
             </div>
         </div>
     </section>
+   
     <section class="section-base">
         <div class="container">
             <div class="row" data-anima="fade-bottom" data-time="1000">
@@ -174,10 +170,10 @@
                     <p>
                        Nos agents sont disposés à vous donner des conseils d'orientation pour vous aider à avoir une solution à vos problèmes.
                     </p>
-                    <a href="#" class="btn-text active">Vous acceptez notre politique</a>
+                    <a href="{{route('policy.index')}}" class="btn-text active">Notre politique de confidentialité</a>
                 </div>
                 <div class="col-lg-6">
-                    <form  method="POST" action="{{route('contact.store')}}" class="form-box form-ajax-wp" enctype="multipart/form-data">
+                    <form  method="POST"  action="{{route('contact.store')}}" class="form-box form-ajax-wp" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-lg-6">
@@ -278,6 +274,7 @@
             <hr class="space-xs" />
         </div>
     </section>
+   
     <section class="section-base section-overflow-top">
         <div class="container">
             <table class="table table-grid table-border align-left boxed-area table-6-md">
@@ -337,6 +334,50 @@
             
         </div>
     </section>
+    <section class="section-base  section-overflow-top">
+        <div class="container">
+            <div class="row" >
+                <div class="col-lg-6">
+                    <div class="title">
+                        <h2>Nos clients </h2>
+                        <p>Clients fidèles</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 align-right align-left-md">
+                    <hr class="space-sm hidden-md" />
+                    <a href="{{route('about.index')}}" class="btn-text active">A propos de nous</a>
+                </div>
+            </div>
+            <table class="table table-grid table-border align-center table-logos table-6-md">
+                <tbody>
+                    <tr>
+                        <td>
+                            <img src="{{asset('admin/assets/images/Noir et Turquoise Automobile Logo (1).png')}}" alt="" />
+                            
+                        </td>
+                        <td>
+                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo.png')}}" alt="" />
+                            
+                        </td>
+                        <td>
+                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo (2).png')}}" alt="" />
+                            
+                        </td>
+                        <td>
+                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo (1).png')}}" alt="" />
+                            
+                        </td>
+                        
+                        <td>
+                            <img src="{{asset('admin/assets/images/Jaune Formes Enfants Logo.png')}}" alt="" />
+                            
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+   
 </main>
 <i class="scroll-top-btn scroll-top show"></i>
 

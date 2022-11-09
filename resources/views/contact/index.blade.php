@@ -1,3 +1,5 @@
+@section('title','Contact')
+
 @extends('master')
 
 @section('content')

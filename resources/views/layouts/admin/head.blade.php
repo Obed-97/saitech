@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
 
     <!-- App Icons -->
-    <link rel="shortcut icon" href="{{asset('admin/assets/images/favicon.jpg')}}">
+    <link rel="shortcut icon" href="{{asset('media/favicon.png')}}">
 
     <!-- DataTables -->
     <link href="{{asset('admin/assets/plugins/datatables/dataTables.bootstrap4.min.css')}}" rel="stylesheet" type="text/css" />

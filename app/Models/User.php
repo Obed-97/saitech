@@ -57,6 +57,11 @@ class User extends Authenticatable
         return $this->hasMany('App\Models\Service');
     }
 
+    public function Client()
+    {
+        return $this->hasMany('App\Models\Client');
+    }
+
     public function Emploi()
     {
         return $this->hasMany('App\Models\Emploi');

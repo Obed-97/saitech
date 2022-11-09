@@ -2,7 +2,7 @@
 
 @section('content')
 
-<header class="header-image ken-burn-center light" data-parallax="true" data-natural-height="1500" data-natural-width="1920" data-bleed="0" data-image-src="{{asset('media/buildings-1853632_1920.jpg')}}" data-offset="0">
+<header class="header-image ken-burn-center light" data-parallax="true" data-bleed="0" data-image-src="{{asset('media/background-6795626.png')}}" data-offset="0">
     <div class="container">
         <h1>A propos</h1>
        

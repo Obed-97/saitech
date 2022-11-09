@@ -64,7 +64,7 @@
 
                             <div class="form-group m-t-10 mb-0 ml-1 row">
                                 @if (Route::has('password.request'))
-                                        <a href="{{ route('password.request') }}"  class="text-gray"><i class="mdi mdi-lock"></i> Mot de passe oublié?</a>
+                                        <a href="{{ route('password.request') }}"  class="text-gray"><i class="mdi mdi-lock"></i> Mot de passe oublié ?</a>
                                     </a>
                                 @endif
                                 
