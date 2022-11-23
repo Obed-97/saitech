@@ -351,27 +351,12 @@
             <table class="table table-grid table-border align-center table-logos table-6-md">
                 <tbody>
                     <tr>
+                        @foreach($clients as $item)
                         <td>
-                            <img src="{{asset('admin/assets/images/Noir et Turquoise Automobile Logo (1).png')}}" alt="" />
-                            
+                            <img src="/admin/assets/images/users/{{$item->image}}" alt="" />
                         </td>
-                        <td>
-                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo.png')}}" alt="" />
-                            
-                        </td>
-                        <td>
-                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo (2).png')}}" alt="" />
-                            
-                        </td>
-                        <td>
-                            <img src="{{asset('admin/assets/images/Crème et Noir Naturel Maquillage Beauté Logo (1).png')}}" alt="" />
-                            
-                        </td>
+                        @endforeach
                         
-                        <td>
-                            <img src="{{asset('admin/assets/images/Jaune Formes Enfants Logo.png')}}" alt="" />
-                            
-                        </td>
                     </tr>
                 </tbody>
             </table>

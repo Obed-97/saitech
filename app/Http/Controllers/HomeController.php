@@ -7,6 +7,7 @@ use App\Models\Service;
 use App\Models\About;
 use App\Models\Projet;
 use App\Models\User;
+use App\Models\Client;
 
 class HomeController extends Controller
 {
@@ -20,8 +21,9 @@ class HomeController extends Controller
         $users = User::all();
         $projets = Projet::all();
         $about = About::all();
+        $clients = Client::all();
         $services = Service::orderBy('id','desc')->get();
-        return view('home.index', compact('services','about','users','projets'));
+        return view('home.index', compact('services','clients','about','users','projets'));
     }
 
     /**

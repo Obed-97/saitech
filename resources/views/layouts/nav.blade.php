@@ -27,10 +27,10 @@
                         </li>
                     </ul>
                 </li>
-                <li >
+                <li>
                     <a href="{{route('emploi.index')}}">CARRIÈRE</a>
                 </li>
-                <li >
+                <li>
                     <a href="{{route('projet.index')}}">Projets</a>
                     
                 </li>
@@ -39,7 +39,7 @@
                     
                 </li>
                 <li class="nav-label">
-                    <a href="#"><span>Appelez-nous :</span> +223 76 50 27 85  </a>
+                    <a href="https://saitech-group.com"><span>Appelez-nous :</span> +223 76 50 27 85  </a>
                 </li>
             </ul>
             <div class="menu-right">

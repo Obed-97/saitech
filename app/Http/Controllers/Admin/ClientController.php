@@ -5,6 +5,8 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Client;
+use Image;
+use Alert;
 
 class ClientController extends Controller
 {
@@ -38,7 +40,26 @@ class ClientController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $filename = NULL;
+
+        if($request->hasFile('image')){
+
+            $image = $request->file('image');
+            $filename = time().'.'.$image->getClientOriginalName();
+            $location = public_path('/admin/assets/images/users/'.$filename);
+            Image::make($image)->save($location);   
+        }
+
+        $client = new Client;
+
+        $client->create([
+            'user_id'=> auth()->user()->id,
+            'libelle'=>$request->libelle,
+            'image' => $filename,
+        ]);
+
+        Alert::success('Client ajouté!');
+        return redirect()->route('clients.index');
     }
 
     /**
@@ -83,6 +104,10 @@ class ClientController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $client = Client::findOrFail($id);
+        $client->delete();
+
+        Alert::info('Client supprimée!');
+        return redirect()->route('clients.index');
     }
 }
